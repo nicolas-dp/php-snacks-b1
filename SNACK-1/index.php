@@ -37,8 +37,8 @@ var_dump($calendario);
 
 
 
-for ($i=0; $i < count($calendario); $i++) { 
-    echo $calendario[$i]['casa'].' - '.$calendario[$i]['ospite'].' | '.$calendario[$i]['puntiCasa'].'-'.$calendario[$i]['puntiOspite'];
+for ($i = 0; $i < count($calendario); $i++) {
+    echo $calendario[$i]['casa'] . ' - ' . $calendario[$i]['ospite'] . ' | ' . $calendario[$i]['puntiCasa'] . '-' . $calendario[$i]['puntiOspite'];
 }
 
 ?>
@@ -55,7 +55,16 @@ for ($i=0; $i < count($calendario); $i++) {
 </head>
 
 <body>
+    <?php for ($i = 0; $i < count($calendario); $i++) { ?>
+        <ul>
+            <li><?php echo $calendario[$i]['casa'] . ' - ' . $calendario[$i]['ospite'] . ' | ' . $calendario[$i]['puntiCasa'] . '-' . $calendario[$i]['puntiOspite'];
+                ?>
+            </li>
+        </ul>
 
+    <?php
+    }
+    ?>
 </body>
 
 </html>
