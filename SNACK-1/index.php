@@ -5,6 +5,8 @@ Olimpia Milano - Cantù | 55-60 -->
 
 <?php
 
+$date = date('l jS \of F Y');
+
 $calendario = [
 
     [
@@ -56,6 +58,7 @@ for ($i = 0; $i < count($calendario); $i++) {
 
 <body>
     <!-- Stampa dentro l'HTML -->
+    <h1>Partite di Basket del <?php echo $date; ?></h1>
     <?php for ($i = 0; $i < count($calendario); $i++) { ?>
         <ul>
             <li><?php echo $calendario[$i]['casa'] . ' - ' . $calendario[$i]['ospite'] . ' | ' . $calendario[$i]['puntiCasa'] . '-' . $calendario[$i]['puntiOspite'];
