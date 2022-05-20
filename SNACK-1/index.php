@@ -5,7 +5,7 @@ Olimpia Milano - Cantù | 55-60 -->
 
 <?php
 
-$date = date('l jS \of F Y');
+$date = date('t/m/o l');
 
 $calendario = [
 
