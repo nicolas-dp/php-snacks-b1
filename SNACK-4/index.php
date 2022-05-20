@@ -3,17 +3,17 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 <?php
 
 
-$arrayRandom = [];   
+$arrayRandom = [];
 
-for ($i = 0; $i < 15; $i++) { 
-   
+for ($i = 0; $i < 15; $i++) {
+
     $elementoArray[$i] = random_int(1, 100);
     if (!in_array($elementoArray[$i], $arrayRandom)) {
-        
+        array_push($arrayRandom, $elementoArray[$i]);
+    } else {
+        $elementoArray[$i] = random_int(1, 100);
         array_push($arrayRandom, $elementoArray[$i]);
     }
-        
-    
 }
 
 
@@ -34,7 +34,25 @@ var_dump($arrayRandom);
 
 <body>
 
+    <h1>15 Numeri random</h1>
 
+    <?php for ($i = 0; $i < 15; $i++) {
+        $elementoArray[$i] = random_int(10, 100);
+        if (!in_array($elementoArray[$i], $arrayRandom)) {
+            array_push($arrayRandom, $elementoArray[$i]);  ?>
+            <ul>
+                <li><?php echo $elementoArray[$i]; ?></li>
+            </ul>
+
+        <?php } else { ?>
+            <?php $elementoArray[$i] = random_int(10, 100);
+            array_push($arrayRandom, $elementoArray[$i]);
+            ?>
+            <ul>
+                <li><?php echo $elementoArray[$i]; ?></li>
+            </ul>
+    <?php }
+    } ?>
 </body>
 
 </html>
