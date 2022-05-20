@@ -33,10 +33,10 @@ $calendario = [
 
 ];
 
-var_dump($calendario);
+//var_dump($calendario);
 
 
-
+/* Stampa fuori da HTML */
 for ($i = 0; $i < count($calendario); $i++) {
     echo $calendario[$i]['casa'] . ' - ' . $calendario[$i]['ospite'] . ' | ' . $calendario[$i]['puntiCasa'] . '-' . $calendario[$i]['puntiOspite'];
 }
@@ -55,6 +55,7 @@ for ($i = 0; $i < count($calendario); $i++) {
 </head>
 
 <body>
+    <!-- Stampa dentro l'HTML -->
     <?php for ($i = 0; $i < count($calendario); $i++) { ?>
         <ul>
             <li><?php echo $calendario[$i]['casa'] . ' - ' . $calendario[$i]['ospite'] . ' | ' . $calendario[$i]['puntiCasa'] . '-' . $calendario[$i]['puntiOspite'];
